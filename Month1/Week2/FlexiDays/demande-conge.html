@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de congé - FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="max-w-3xl mx-auto p-6 space-y-6">
+    <h1 class="text-xl font-bold">Nouvelle demande de congé</h1>
+
+    <form class="bg-white p-6 rounded-lg shadow space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="date" class="border p-2 rounded w-full" placeholder="Date début">
+        <input type="date" class="border p-2 rounded w-full" placeholder="Date fin">
+      </div>
+      <select class="border p-2 rounded w-full">
+        <option>Sélectionner un type de congé</option>
+        <option>Congés payés</option>
+        <option>Congé maladie</option>
+        <option>RTT</option>
+      </select>
+      <textarea rows="4" maxlength="500" class="border p-2 rounded w-full" placeholder="Justification (500 caractères max)"></textarea>
+
+      <div class="text-sm text-gray-500 bg-gray-50 p-2 rounded">ℹ️ Votre demande sera transmise au manager pour validation.</div>
+
+      <div class="flex gap-4">
+        <button class="bg-blue-600 text-white px-6 py-2 rounded">Soumettre</button>
+        <button type="reset" class="bg-gray-200 px-6 py-2 rounded">Réinitialiser</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+    <div id="footer"></div>
+
+  <script src="components/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="max-w-6xl mx-auto p-6 space-y-6">
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-gray-500">Solde de congés</h3>
+        <p class="text-3xl font-bold text-blue-600">23 jours</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-gray-500">Demandes approuvées</h3>
+        <p class="text-3xl font-bold text-green-600">12</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-gray-500">Demandes refusées</h3>
+        <p class="text-3xl font-bold text-red-600">3</p>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="font-semibold mb-4">Notifications</h2>
+      <div class="space-y-2">
+        <p>🚪 Fermeture exceptionnelle le 14 juillet</p>
+        <p>📢 Nouvelle politique de télétravail à partir de septembre</p>
+        <p>🎉 Afterwork vendredi prochain</p>
+      </div>
+    </div>
+
+    <!-- Navigation quick links -->
+    <div class="flex justify-center gap-4">
+      <a href="mes-conges.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg">Mes congés</a>
+      <a href="demande-conge.html" class="px-6 py-3 bg-green-600 text-white rounded-lg">Demande de congé</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+    <div id="footer"></div>
+
+  <script src="components/include.js"></script>
+</body>
+</html>

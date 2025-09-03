@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes congés - FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-6">
+    <h1 class="text-xl font-bold">Mes congés</h1>
+
+    <!-- Résumé -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <p class="text-gray-500">Solde restant</p>
+        <p class="text-xl font-bold text-blue-600">23</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <p class="text-gray-500">Approuvés</p>
+        <p class="text-xl font-bold text-green-600">12</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <p class="text-gray-500">En attente</p>
+        <p class="text-xl font-bold text-yellow-600">2</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <p class="text-gray-500">Refusés</p>
+        <p class="text-xl font-bold text-red-600">1</p>
+      </div>
+    </div>
+
+    <!-- Liste -->
+    <div class="bg-white p-6 shadow rounded-lg space-y-4">
+      <div class="flex justify-between items-center border-b pb-2">
+        <div>
+          <h3 class="font-semibold">Congés d’été</h3>
+          <p class="text-sm text-gray-500">15 au 29 juillet 2025 - 15 jours</p>
+        </div>
+        <span class="text-yellow-600 font-semibold">En attente</span>
+      </div>
+      <div class="flex justify-between items-center border-b pb-2">
+        <div>
+          <h3 class="font-semibold">Congés de Pâques</h3>
+          <p class="text-sm text-gray-500">14 au 18 avril 2025 - 5 jours</p>
+        </div>
+        <span class="text-green-600 font-semibold">Approuvé</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <div>
+          <h3 class="font-semibold">Congés de Noël</h3>
+          <p class="text-sm text-gray-500">23 déc 2024 au 2 janv 2025 - 11 jours</p>
+        </div>
+        <span class="text-red-600 font-semibold">Refusé</span>
+      </div>
+    </div>
+  </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+  <script src="components/include.js"></script>
+</body>
+</html>
