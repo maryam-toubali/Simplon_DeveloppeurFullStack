@@ -46,6 +46,4 @@ flexidays/
 ├── administration.html → Gestion RH
 │
 ├── components/ → Navbar + Footer
-├── assets/css/style.css → Styles personnalisés
-├── assets/js/main.js → Interactions JS
 └── assets/img/ → Logos, avatars, icônes
