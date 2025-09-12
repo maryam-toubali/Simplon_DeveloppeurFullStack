@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mes congés — FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <div id="app" class="flex">
+    <aside class="w-72 bg-white border-r h-screen p-6 hidden md:block">
+      <div class="mb-6"><h2 class="text-xl font-bold">FlexiDays</h2></div>
+      <nav class="space-y-2">
+        <a href="index.html" class="sidebar-link">Dashboard</a>
+        <a href="mes-conges.html" class="sidebar-link active">Mes congés</a>
+        <a href="demande.html" class="sidebar-link">Nouvelle demande</a>
+        <a href="manager.html" class="sidebar-link">Administration</a>
+      </nav>
+    </aside>
+
+    <main class="flex-1 p-6">
+      <header class="mb-6">
+        <h1 class="text-2xl font-semibold">Mes congés</h1>
+        <p class="text-slate-500">Toutes vos demandes</p>
+      </header>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-sm border p-4">
+            <h3 class="font-semibold mb-3">Liste des demandes</h3>
+            <div id="liste-demandes" class="space-y-3">Chargement...</div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="bg-white rounded-lg shadow-sm border p-4">
+            <h4 class="font-semibold mb-2">Récap</h4>
+            <div id="recap-stats" class="text-sm text-slate-600">Chargement...</div>
+            <a href="demande.html" class="mt-4 inline-block px-3 py-2 bg-sky-600 text-white rounded">Faire une demande</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/mesConges.js"></script>
+</body>
+</html>

@@ -9,32 +9,22 @@
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen">
   <div id="app" class="flex">
-    <!-- Sidebar -->
     <aside class="w-72 bg-white border-r h-screen p-6 hidden md:block">
       <div class="mb-6">
         <h2 class="text-xl font-bold">FlexiDays</h2>
         <p class="text-sm text-slate-500">Gestion des congés</p>
       </div>
       <nav class="space-y-2">
-        <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100 active:bg-slate-100 font-medium">Dashboard</a>
-        <a href="mes-conges.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Mes congés</a>
-        <a href="demande.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Nouvelle demande</a>
-        <a href="manager.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Administration</a>
+        <a href="index.html" class="sidebar-link active">Dashboard</a>
+        <a href="mes-conges.html" class="sidebar-link">Mes congés</a>
+        <a href="demande.html" class="sidebar-link">Nouvelle demande</a>
+        <a href="manager.html" class="sidebar-link">Administration</a>
       </nav>
+</aside>
 
-      <div class="mt-8 text-xs text-slate-500">
-        <p id="company-address"></p>
-        <p id="rh-email"></p>
-      </div>
-    </aside>
-
-    <!-- Main -->
     <main class="flex-1 p-6">
-      <!-- Top bar (mobile: show menu button) -->
       <div class="flex items-center justify-between md:hidden mb-4">
-        <div>
-          <button id="mobileMenuBtn" class="px-3 py-2 bg-white rounded shadow">Menu</button>
-        </div>
+        <button id="mobileMenuBtn" class="px-3 py-2 bg-white rounded shadow">Menu</button>
         <div id="top-user" class="flex items-center gap-3">
           <img src="assets/img/avatar.png" class="w-9 h-9 rounded-full border" alt="avatar">
           <div>
@@ -44,15 +34,12 @@
         </div>
       </div>
 
-      <!-- Dashboard header -->
       <header class="mb-6">
         <h1 class="text-2xl font-semibold">Tableau de bord</h1>
         <p class="text-slate-500">Vue d’ensemble de vos congés et actions rapides</p>
       </header>
 
-      <!-- Grid -->
       <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Left: KPIs -->
         <div class="lg:col-span-2 space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div class="p-4 bg-white rounded-lg shadow-sm border">
@@ -83,7 +70,6 @@
           </div>
         </div>
 
-        <!-- Right: Notifications -->
         <aside class="space-y-4">
           <div class="bg-white rounded-lg shadow-sm border p-4">
             <h4 class="font-semibold mb-2">Notifications</h4>
@@ -99,9 +85,7 @@
     </main>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>const API_URL = "http://localhost:3000";</script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

@@ -7,61 +7,75 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
-    <!-- Navbar -->
   <div id="navbar"></div>
 
-  <main class="max-w-5xl mx-auto p-6 space-y-6">
-    <h1 class="text-xl font-bold">Mes congés</h1>
+  <main class="max-w-7xl mx-auto px-6 py-8 space-y-6">
+    <h1 class="text-2xl font-semibold">Mes congés</h1>
 
     <!-- Résumé -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-white p-4 shadow rounded-lg text-center">
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
         <p class="text-gray-500">Solde restant</p>
-        <p class="text-xl font-bold text-blue-600">23</p>
+        <p class="text-2xl font-bold text-blue-600">23</p>
       </div>
-      <div class="bg-white p-4 shadow rounded-lg text-center">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
         <p class="text-gray-500">Approuvés</p>
-        <p class="text-xl font-bold text-green-600">12</p>
+        <p class="text-2xl font-bold text-green-600">12</p>
       </div>
-      <div class="bg-white p-4 shadow rounded-lg text-center">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
         <p class="text-gray-500">En attente</p>
-        <p class="text-xl font-bold text-yellow-600">2</p>
+        <p class="text-2xl font-bold text-yellow-600">2</p>
       </div>
-      <div class="bg-white p-4 shadow rounded-lg text-center">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
         <p class="text-gray-500">Refusés</p>
-        <p class="text-xl font-bold text-red-600">1</p>
+        <p class="text-2xl font-bold text-red-600">1</p>
       </div>
-    </div>
+    </section>
 
     <!-- Liste -->
-    <div class="bg-white p-6 shadow rounded-lg space-y-4">
-      <div class="flex justify-between items-center border-b pb-2">
-        <div>
-          <h3 class="font-semibold">Congés d’été</h3>
-          <p class="text-sm text-gray-500">15 au 29 juillet 2025 - 15 jours</p>
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-0 overflow-hidden">
+      <div class="divide-y">
+        <div class="px-6 py-4 flex items-center justify-between">
+          <div>
+            <h3 class="font-semibold">Congés d’été</h3>
+            <p class="text-sm text-gray-500">15 juillet 2025 → 29 juillet 2025 — 15 jours — Type : Congés payés</p>
+          </div>
+          <span class="badge badge-yellow">En attente</span>
         </div>
-        <span class="text-yellow-600 font-semibold">En attente</span>
-      </div>
-      <div class="flex justify-between items-center border-b pb-2">
-        <div>
-          <h3 class="font-semibold">Congés de Pâques</h3>
-          <p class="text-sm text-gray-500">14 au 18 avril 2025 - 5 jours</p>
+
+        <div class="px-6 py-4 flex items-center justify-between">
+          <div>
+            <h3 class="font-semibold">Pont de mai</h3>
+            <p class="text-sm text-gray-500">2 mai 2025 → 2 mai 2025 — 1 jour — Type : Congés payés</p>
+          </div>
+          <span class="badge badge-green">Approuvé</span>
         </div>
-        <span class="text-green-600 font-semibold">Approuvé</span>
-      </div>
-      <div class="flex justify-between items-center">
-        <div>
-          <h3 class="font-semibold">Congés de Noël</h3>
-          <p class="text-sm text-gray-500">23 déc 2024 au 2 janv 2025 - 11 jours</p>
+
+        <div class="px-6 py-4 flex items-center justify-between">
+          <div>
+            <h3 class="font-semibold">Congés de Noël</h3>
+            <p class="text-sm text-gray-500">23 déc. 2024 → 2 jan. 2025 — 11 jours — Type : Congés payés</p>
+            <p class="text-xs text-gray-500 mt-1">Motif du refus : Période de forte activité, demande trop tardive</p>
+          </div>
+          <span class="badge badge-red">Refusé</span>
         </div>
-        <span class="text-red-600 font-semibold">Refusé</span>
       </div>
-    </div>
+
+      <!-- Actions -->
+      <div class="px-6 py-4 flex gap-3 border-t">
+        <button class="btn btn-secondary">Modifier</button>
+        <button class="btn btn-secondary">Annuler</button>
+      </div>
+    </section>
   </main>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+  <div id="footer"></div>
 
   <script src="components/include.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    loadHTML('navbar', 'components/navbar.html');
+    loadHTML('footer', 'components/footer.html');
+  </script>
 </body>
 </html>

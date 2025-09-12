@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration - FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div id="navbar"></div>
+
+  <main class="max-w-7xl mx-auto px-6 py-8 space-y-6">
+    <h1 class="text-2xl font-semibold">Gestion des congés</h1>
+    <p class="text-gray-500 -mt-3">Gérez toutes les demandes de congés des employés</p>
+
+    <!-- KPIs -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
+        <p class="text-gray-500">En attente</p>
+        <p class="text-2xl font-bold text-yellow-600">12</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
+        <p class="text-gray-500">Approuvées</p>
+        <p class="text-2xl font-bold text-green-600">45</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
+        <p class="text-gray-500">Refusées</p>
+        <p class="text-2xl font-bold text-red-600">3</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 text-center">
+        <p class="text-gray-500">Total ce mois</p>
+        <p class="text-2xl font-bold text-blue-600">60</p>
+      </div>
+    </section>
+
+    <!-- Filtres -->
+    <div class="flex flex-wrap gap-3 items-center justify-between">
+      <div class="flex gap-2">
+        <button class="btn btn-secondary">Filtrer</button>
+        <button class="btn btn-secondary">Exporter</button>
+      </div>
+      <div class="flex gap-2">
+        <select class="border rounded-lg px-3 py-2 text-sm">
+          <option>Tous les statuts</option>
+          <option>En attente</option>
+          <option>Approuvées</option>
+          <option>Refusées</option>
+        </select>
+        <input type="text" class="border rounded-lg px-3 py-2 text-sm" placeholder="Rechercher un employé...">
+      </div>
+    </div>
+
+    <!-- Cartes demandes -->
+    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Carte 1 -->
+      <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/avatar.png" class="w-10 h-10 rounded-full border" alt="">
+            <div>
+              <div class="font-semibold">Marie Dubois</div>
+              <div class="text-sm text-gray-500">Développeuse</div>
+            </div>
+          </div>
+          <span class="badge badge-yellow">En attente</span>
+        </div>
+        <dl class="mt-4 space-y-1 text-sm">
+          <div class="flex justify-between"><dt class="text-gray-500">Type</dt><dd>Congés payés</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Du</dt><dd>15 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Au</dt><dd>22 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Durée</dt><dd>5 jours</dd></div>
+        </dl>
+        <div class="mt-4 flex gap-2">
+          <button class="btn btn-success">Approuver</button>
+          <button class="btn btn-danger">Refuser</button>
+        </div>
+      </article>
+
+      <!-- Carte 2 -->
+      <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/avatar.png" class="w-10 h-10 rounded-full border" alt="">
+            <div>
+              <div class="font-semibold">Pierre Martin</div>
+              <div class="text-sm text-gray-500">Designer</div>
+            </div>
+          </div>
+          <span class="badge badge-yellow">En attente</span>
+        </div>
+        <dl class="mt-4 space-y-1 text-sm">
+          <div class="flex justify-between"><dt class="text-gray-500">Type</dt><dd>Congé maladie</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Du</dt><dd>20 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Au</dt><dd>21 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Durée</dt><dd>2 jours</dd></div>
+        </dl>
+        <div class="mt-4 flex gap-2">
+          <button class="btn btn-success">Approuver</button>
+          <button class="btn btn-danger">Refuser</button>
+        </div>
+      </article>
+
+      <!-- Carte 3 -->
+      <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/avatar.png" class="w-10 h-10 rounded-full border" alt="">
+            <div>
+              <div class="font-semibold">Sophie Laurent</div>
+              <div class="text-sm text-gray-500">Chef de projet</div>
+            </div>
+          </div>
+          <span class="badge badge-green">Approuvé</span>
+        </div>
+        <dl class="mt-4 space-y-1 text-sm">
+          <div class="flex justify-between"><dt class="text-gray-500">Type</dt><dd>Congés payés</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Du</dt><dd>25 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Au</dt><dd>05 Fév 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Durée</dt><dd>8 jours</dd></div>
+        </dl>
+        <div class="mt-4 flex gap-2">
+          <button class="btn btn-secondary">✓ Approuvé</button>
+          <button class="btn btn-secondary">Voir</button>
+        </div>
+      </article>
+
+      <!-- Carte 4 -->
+      <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/avatar.png" class="w-10 h-10 rounded-full border" alt="">
+            <div>
+              <div class="font-semibold">Thomas Petit</div>
+              <div class="text-sm text-gray-500">Analyste</div>
+            </div>
+          </div>
+          <span class="badge badge-yellow">En attente</span>
+        </div>
+        <dl class="mt-4 space-y-1 text-sm">
+          <div class="flex justify-between"><dt class="text-gray-500">Type</dt><dd>RTT</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Du</dt><dd>28 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Au</dt><dd>28 Jan 2025</dd></div>
+          <div class="flex justify-between"><dt class="text-gray-500">Durée</dt><dd>1 jour</dd></div>
+        </dl>
+        <div class="mt-4 flex gap-2">
+          <button class="btn btn-success">Approuver</button>
+          <button class="btn btn-danger">Refuser</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-end gap-2">
+      <button class="btn btn-secondary">Précédent</button>
+      <button class="btn btn-primary">1</button>
+      <button class="btn btn-secondary">2</button>
+      <button class="btn btn-secondary">3</button>
+      <button class="btn btn-secondary">Suivant</button>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="components/include.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    loadHTML('navbar', 'components/navbar.html');
+    loadHTML('footer', 'components/footer.html');
+  </script>
+</body>
+</html>

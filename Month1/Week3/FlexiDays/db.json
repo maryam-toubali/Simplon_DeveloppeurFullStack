@@ -1,0 +1,76 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Salma",
+      "role": "Développeur",
+      "daysOff": 25
+    }
+  ],
+  "requests": [
+    {
+      "id": "2",
+      "employeeId": 1,
+      "employeeName": "Sara",
+      "type": "RTT",
+      "from": "2025-05-01",
+      "to": "2025-05-02",
+      "status": "Approuvé",
+      "justification": ""
+    },
+    {
+      "id": "65c6",
+      "employeeId": 1,
+      "employeeName": "Salma",
+      "type": "RTT",
+      "from": "2025-09-20",
+      "to": "2025-09-29",
+      "justification": "",
+      "status": "Approuvé"
+    },
+    {
+      "id": "f2ca",
+      "employeeId": 1,
+      "employeeName": "Maryam",
+      "type": "Sans solde",
+      "from": "2026-03-21",
+      "to": "2026-04-22",
+      "justification": "test",
+      "status": "Refusé"
+    },
+    {
+      "id": "c13a",
+      "employeeId": 1,
+      "employeeName": "Khadija",
+      "type": "Congés payés",
+      "from": "2026-03-02",
+      "to": "2026-03-02",
+      "justification": "",
+      "status": "En attente"
+    },
+    {
+      "id": "d1ec",
+      "employeeId": 1,
+      "employeeName": "Maryam",
+      "type": "Congés payés",
+      "from": "2026-04-22",
+      "to": "2026-05-10",
+      "justification": "",
+      "status": "En attente"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "message": "Fermeture exceptionnelle le 15 mars 2025."
+    },
+    {
+      "id": "2",
+      "message": "RAPPEL : remplissez votre solde RTT avant le 30 juin."
+    }
+  ],
+  "settings": {
+    "rh_email": "rh@flexidays.com",
+    "company_address": "123 Rue Simplon, Casa"
+  }
+}

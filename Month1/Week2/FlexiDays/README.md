@@ -37,13 +37,10 @@ Elle permet de visualiser, demander et gérer facilement les jours de congés.
 ---
 
 ## Structure du projet
-
 flexidays/
-│
-├── index.html → Dashboard
-├── mes-conges.html → Mes congés
-├── demande-conge.html → Nouvelle demande
-├── administration.html → Gestion RH
-│
-├── components/ → Navbar + Footer
-└── assets/img/ → Logos, avatars, icônes
+│── index.html          → Dashboard
+│── mes-conges.html     → Mes congés
+│── demande.html        → Demande de congé
+│── manager.html        → Administration
+
+npx json-server --watch db.json --port 3000

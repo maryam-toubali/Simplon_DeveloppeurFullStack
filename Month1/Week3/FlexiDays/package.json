@@ -1,0 +1,9 @@
+{
+  "name": "flexidays",
+  "version": "1.0.0",
+  "scripts": {
+    "api": "json-server --watch db.json --port 3000",
+    "start": "npx serve . -l 5000"
+  },
+  "devDependencies": {}
+}

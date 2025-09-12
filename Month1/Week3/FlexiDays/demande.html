@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nouvelle demande — FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <div id="app" class="flex">
+    <aside class="w-72 bg-white border-r h-screen p-6 hidden md:block">
+      <div class="mb-6"><h2 class="text-xl font-bold">FlexiDays</h2></div>
+      <nav class="space-y-2">
+        <a href="index.html" class="sidebar-link">Dashboard</a>
+        <a href="mes-conges.html" class="sidebar-link">Mes congés</a>
+        <a href="demande.html" class="sidebar-link active">Nouvelle demande</a>
+        <a href="manager.html" class="sidebar-link">Administration</a>
+      </nav>
+    </aside>
+
+    <main class="flex-1 p-6">
+      <header class="mb-6">
+        <h1 class="text-2xl font-semibold">Nouvelle demande de congé</h1>
+        <p class="text-slate-500">Remplissez le formulaire ci-dessous</p>
+      </header>
+
+      <section class="max-w-2xl">
+        <form id="form-demande" class="bg-white p-6 rounded-lg shadow-sm border space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm text-slate-600">Date de début</label>
+              <input id="from" type="date" required class="w-full border rounded px-3 py-2" />
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600">Date de fin</label>
+              <input id="to" type="date" required class="w-full border rounded px-3 py-2" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-slate-600">Type de congé</label>
+            <select id="type" required class="w-full border rounded px-3 py-2">
+              <option value="">Sélectionnez</option>
+              <option>Congés payés</option>
+              <option>Congé maladie</option>
+              <option>RTT</option>
+              <option>Sans solde</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm text-slate-600">Justification</label>
+            <textarea id="justification" rows="4" maxlength="500" class="w-full border rounded px-3 py-2" placeholder="Raison..."></textarea>
+          </div>
+
+          <div class="flex gap-3">
+            <button type="submit" class="px-4 py-2 bg-sky-600 text-white rounded">Soumettre</button>
+            <button type="reset" class="px-4 py-2 bg-white border rounded">Réinitialiser</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/demande.js"></script>
+</body>
+</html>

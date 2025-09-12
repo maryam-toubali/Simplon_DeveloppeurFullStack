@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de congé - FlexiDays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div id="navbar"></div>
+
+  <main class="max-w-3xl mx-auto px-6 py-8 space-y-6">
+    <h1 class="text-2xl font-semibold">Nouvelle demande de congé</h1>
+    <p class="text-gray-500 -mt-3">Remplissez le formulaire ci-dessous pour soumettre votre demande de congé.</p>
+
+    <!-- Formulaire -->
+    <form class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Date de début</label>
+          <input type="date" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+        </div>
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Date de fin</label>
+          <input type="date" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm text-gray-600 mb-1">Type de congé</label>
+        <select class="w-full border rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+          <option>Sélectionnez un type de congé</option>
+          <option>Congés payés</option>
+          <option>Congé maladie</option>
+          <option>RTT</option>
+          <option>Sans solde</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm text-gray-600 mb-1">Justification</label>
+        <textarea rows="4" maxlength="500" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900/10" placeholder="Décrivez la raison de votre demande..."></textarea>
+        <p class="text-xs text-gray-400 mt-1">Maximum 500 caractères</p>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 text-gray-600 rounded-lg p-3 text-sm flex gap-2">
+        <span>ℹ️</span>
+        <p>Votre demande sera transmise à votre manager pour validation. Vous recevrez une notification par email une fois la décision prise.</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <button type="submit" class="btn btn-primary">Soumettre la demande</button>
+        <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+      </div>
+    </form>
+
+    <!-- Dernières demandes -->
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">
+      <h3 class="font-semibold">Mes dernières demandes</h3>
+      <div class="flex items-center justify-between">
+        <div class="text-sm">
+          <div class="font-medium">Congés payés</div>
+          <div class="text-gray-500">15/03/2025 → 19/03/2025</div>
+        </div>
+        <span class="badge badge-yellow">En attente</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="text-sm">
+          <div class="font-medium">Congé personnel</div>
+          <div class="text-gray-500">08/02/2025 → 08/02/2025</div>
+        </div>
+        <span class="badge badge-green">Approuvé</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
